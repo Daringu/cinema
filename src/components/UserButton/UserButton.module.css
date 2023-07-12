@@ -1,0 +1,25 @@
+.userContainer{
+    display: inline-flex;
+    gap: 8px;
+    cursor: pointer;
+    align-items: center;
+}
+.userContainer p{
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    transition: all 0.3s ease-out;
+}
+.userContainer:hover p{
+    scale: 1.1;
+}
+.userContainer:hover img{
+    border: solid black 1px;
+    scale: 1.2;
+    rotate: 360deg;
+}
+.userContainer img{
+    transition: all 0.3s ease-out;
+}

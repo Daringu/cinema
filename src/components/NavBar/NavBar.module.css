@@ -1,0 +1,14 @@
+.navBarContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 46px;
+    margin-left: 32px;
+    margin-right: 42px;
+}
+.navBarButtonContainer{
+    display: flex;
+    gap: 32px;
+}
+.linkList{
+    display: flex;
+}

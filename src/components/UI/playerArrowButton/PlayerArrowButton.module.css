@@ -1,0 +1,9 @@
+.button {
+  border-radius: 6.4px;
+  background: linear-gradient(
+    154deg,
+    #848383 0%,
+    rgba(255, 255, 255, 0.40) 100%
+  );
+  backdrop-filter: blur(42.66666793823242px);
+}

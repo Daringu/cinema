@@ -1,0 +1,33 @@
+.SideBarContainer{
+    background: #21201E;
+    box-shadow: 2px 0 90px 0 rgba(97, 0, 194, 0.40);
+    padding: 40px 102px 162px 40px;
+    display: grid;
+    flex-direction: column;
+    gap: 122px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 1/3;
+}
+.logo{
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+.logo:hover{
+    scale: 1.2;
+}
+.logoLinks{
+    display: flex;
+    gap: 58px;
+    flex-direction: column;
+}
+.otherLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 258px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}

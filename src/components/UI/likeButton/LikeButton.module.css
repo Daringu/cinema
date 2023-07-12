@@ -1,0 +1,21 @@
+.button {
+  border-radius: 25%;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+.button:hover {
+  background: grey;
+}
+.icon {
+  stroke: #6100c2;
+  transition: all 0.3s ease-out;
+  fill: white;
+  stroke-width: 2;
+}
+.iconActive {
+  fill: #6100c2;
+}

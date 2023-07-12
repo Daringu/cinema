@@ -1,0 +1,16 @@
+.navBarBtn{
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    transition: all 0.1s ease-out;
+    cursor: pointer;
+}
+.navBarBtnActive{
+    font-weight: 700;
+}
+.navBarBtn:hover{
+    scale: 1.1;
+    position: relative;
+}

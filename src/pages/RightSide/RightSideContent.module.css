@@ -1,0 +1,23 @@
+.cont{
+    background: #21201E;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end:2;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont::-webkit-scrollbar,
+.cont::-webkit-scrollbar-thumb {
+    width: 26px;
+    border-radius: 13px;
+    background-clip: padding-box;
+    border: 10px solid transparent;
+}
+.cont::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 0 10px;
+}
