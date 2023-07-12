@@ -47,7 +47,7 @@ const RightSideContent =memo(function RightSideContent()  {
         setLoading(true)
         const fetchTit=async ()=>{
             try {
-                const titlesFetched=await  map[params.type](type,page)
+                const titlesFetched=await  (map[params.type]?map[params.type](type,page):FetchAPI.fetchTrending(type,page))
                 setTitels([...titles,...titlesFetched.data.results])
                 setTotalPages(titlesFetched.data.total_pages)
             }catch (e){
@@ -60,10 +60,12 @@ const RightSideContent =memo(function RightSideContent()  {
     },[page])
 
     useEffect(()=>{
+        if (isLoading)return;
         setLoading(true)
         const fetchTit=async ()=>{
             try {
-                const titlesFetched=await  map[params.type](type,page)
+
+                const titlesFetched=await  (map[params.type]?map[params.type](type,page):FetchAPI.fetchTrending(type,page))
                 setTitels([...titlesFetched.data.results])
                 setPage(1)
                 setTotalPages(titlesFetched.data.total_pages)
