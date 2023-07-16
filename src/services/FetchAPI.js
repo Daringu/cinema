@@ -12,7 +12,7 @@ class FetchAPI{
         const options = {
             method: 'GET',
             url: `https://api.themoviedb.org/3/trending/${type}/week`,
-            params: {language: 'en-US',page:page},
+            params: {language: 'en-US',page:page,perPage:5},
             headers: {
                 accept: 'application/json',
                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNzFhZmIxOWEwOTg4YjA5YzEzMDgwODQ4NTQ0NmRjOCIsInN1YiI6IjY0YTRjZjU1MTU4Yzg1MDBlMjRhNTAyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.59822Ojk6gXO1bwV6I5itqzNma86Uen5oCy8xAVt9bQ'
@@ -29,13 +29,14 @@ class FetchAPI{
         const options = {
             method: 'GET',
             url: `https://api.themoviedb.org/3/${type}/${type.toLowerCase()==='tv'?'on_the_air':'upcoming'}`,
-            params: {page:page},
+            params: {page:page,perPage:5},
             headers: {
                 accept: 'application/json',
                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNzFhZmIxOWEwOTg4YjA5YzEzMDgwODQ4NTQ0NmRjOCIsInN1YiI6IjY0YTRjZjU1MTU4Yzg1MDBlMjRhNTAyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.59822Ojk6gXO1bwV6I5itqzNma86Uen5oCy8xAVt9bQ'
             }
         };
         try {
+           
             const titles=await axios(options)
             return titles
         }catch (e){
@@ -46,7 +47,7 @@ class FetchAPI{
         const options = {
             method: 'GET',
             url: `https://api.themoviedb.org/${type}`,
-            params: {page:page},
+            params: {page:page,perPage:5},
             headers: {
                 accept: 'application/json',
                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNzFhZmIxOWEwOTg4YjA5YzEzMDgwODQ4NTQ0NmRjOCIsInN1YiI6IjY0YTRjZjU1MTU4Yzg1MDBlMjRhNTAyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.59822Ojk6gXO1bwV6I5itqzNma86Uen5oCy8xAVt9bQ'

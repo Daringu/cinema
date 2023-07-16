@@ -1,16 +1,31 @@
+
 .cont{
     background: #21201E;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end:2;
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
     gap: 20px;
+    padding-top: 20px;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
 }
-
+@media screen and (min-width: 850px) {
+    .cont{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-row-end:2;
+    }
+}
+@media screen and (max-width: 849px) {
+    .cont{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        flex-direction: row;
+        gap: 30px;
+    }
+}
 .cont::-webkit-scrollbar,
 .cont::-webkit-scrollbar-thumb {
     width: 26px;

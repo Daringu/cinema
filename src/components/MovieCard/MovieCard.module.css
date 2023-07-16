@@ -9,7 +9,7 @@
   position: relative;
   overflow-y: hidden;
 }
-.movieCardContainer:hover{
+.movieCardContainer:hover {
   scale: 1.1;
   position: relative;
 }
@@ -32,12 +32,14 @@
   height: 100%;
   backdrop-filter: blur(10px);
   overflow-y: scroll;
-  max-width: 100%;
+  width: 84.5%;
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
   transform: translateY(200px);
   transition: all 0.1s ease-out;
 }
-.movieCardTextBar:hover{
+.movieCardTextBar:hover {
   transform: translateY(0);
 }
 .movieCardTextBar::-webkit-scrollbar {

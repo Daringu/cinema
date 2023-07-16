@@ -7,6 +7,6 @@ img {
   height: auto;
 }
 body {
-  background: #21201E;
-
+  background: #21201e;
+  overflow-x: hidden;
 }

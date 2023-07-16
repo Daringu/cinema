@@ -1,10 +1,24 @@
-import styles from './NavBarButton.module.css'
-import {useRef} from "react";
+import styles from "./NavBarButton.module.css";
+import { useRef } from "react";
 
-const NavBarButton = ({onClick,type,typeToCheck,children}) => {
-    const typeCurrent=useRef()
-    typeCurrent.current=type
-    return <p onClick={()=>onClick(type)} className={`${styles.navBarBtn} ${typeToCheck === type ?styles.navBarBtnActive:''}`}>{children}</p>
+const NavBarButton = ({ onClick, type, typeToCheck, children }) => {
+  const typeCurrent = useRef();
+  typeCurrent.current = type;
+  return (
+    <p
+      onClick={(e) => {
+        if (typeToCheck === type) {
+          return;
+        }
+        onClick(type);
+      }}
+      className={`${styles.navBarBtn} ${
+        typeToCheck === type ? styles.navBarBtnActive : ""
+      }`}
+    >
+      {children}
+    </p>
+  );
 };
 
 export default NavBarButton;
